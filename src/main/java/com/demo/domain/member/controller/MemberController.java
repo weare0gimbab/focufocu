@@ -17,8 +17,6 @@ import com.demo.domain.member.service.MemberService;
 import com.demo.global.exception.ErrorResponse;
 import com.demo.global.security.CustomUserDetails;
 
-import java.util.List;
-
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/api/v1/auth")
