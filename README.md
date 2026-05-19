@@ -16,9 +16,10 @@
 
 ## 기술 스택
 
-- UI: Compose for Desktop
+- 클라이언트: Electron
 - 로컬 DB: SQLite or Mysql (변경 가능)
-- 서버: Spring Boot
+- 서버: Spring Boot 3.5.14 , JAVA 25, Redis 7
+- CI,CD : Github Action
 
 ## 서비스 소개
 
@@ -38,4 +39,4 @@
 - 요일별 패턴
 - 연속 집중 시간
 
-4. 인사이트 “너는 오후 9시에 집중 잘되는 편”
+4. 인사이트 “오후 9시에 집중 잘되는 편”
