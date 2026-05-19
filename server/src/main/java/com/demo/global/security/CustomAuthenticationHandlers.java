@@ -1,7 +1,6 @@
 package com.demo.global.security;
 
 import lombok.RequiredArgsConstructor;
-import org.springframework.security.web.authentication.AuthenticationFailureHandler;
 import org.springframework.security.web.authentication.AuthenticationSuccessHandler;
 import org.springframework.stereotype.Component;
 import com.demo.global.security.jwt.JwtContents;

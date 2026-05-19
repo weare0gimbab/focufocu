@@ -16,7 +16,7 @@ public class LoginRequestDTO {
     private String email;
 
     @NotBlank(message = "비밀번호는 필수 입력입니다.")
-    @Size(min = 8, max = 20, message = "비밀번호는 8자 이상 20자 이하로 입력해야 합니다.")
+    @Size(min = 4, max = 20, message = "비밀번호는 8자 이상 20자 이하로 입력해야 합니다.")
     @Schema(description = "로그인할 비밀번호", example = "password123", required = true)
     private String password;
 }

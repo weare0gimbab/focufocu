@@ -1,5 +1,6 @@
 package com.demo.domain.member.controller;
 
+import io.jsonwebtoken.security.Password;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.media.Content;
@@ -10,6 +11,7 @@ import jakarta.servlet.http.HttpServletResponse;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 import com.demo.domain.member.dto.AuthTokensDTO;
 import com.demo.domain.member.dto.request.*;

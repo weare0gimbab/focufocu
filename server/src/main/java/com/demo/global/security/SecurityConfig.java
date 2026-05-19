@@ -109,7 +109,7 @@ public class SecurityConfig {
 
         @Bean
         public PasswordEncoder passwordEncoder() {
-                // TODO : 순환 참조 발생하면 클래스 분리 필요
+                // TODO : 순환 참조 발생하면 클래스 분리
                 return PasswordEncoderFactories.createDelegatingPasswordEncoder();
         }
 }
