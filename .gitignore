@@ -38,3 +38,5 @@ out/
 
 ### Environment ###
 .env
+
+.Ds_Store
