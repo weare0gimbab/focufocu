@@ -12,4 +12,8 @@ public class RedisKeys {
     public static String passwordResetToken(String email) {
         return "password:reset:token:" + email;
     }
+
+    public static String refreshToken(Long memberId, String jti) {
+        return "auth:refresh:" + memberId + ":" + jti;
+    }
 }

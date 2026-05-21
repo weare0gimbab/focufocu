@@ -81,7 +81,8 @@ public class SecurityConfig {
                                                                 "/api/v1/auth/token/refresh",
                                                                 "/api/v1/auth/login",
                                                                 "/api/v1/auth/token/logout",
-                                                                "/api/v1/auth/check-nickname")
+                                                                "/api/v1/auth/check-nickname",
+                                                                "/error")
                                                 .permitAll()
                                                 .anyRequest().authenticated())
 

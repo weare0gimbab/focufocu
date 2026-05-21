@@ -27,11 +27,12 @@ public class JwtFilter extends OncePerRequestFilter {
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain)
             throws ServletException, IOException {
+
         if (request.getRequestURI().equals(REFRESH_COOKIE_PATH)) {
             filterChain.doFilter(request, response);
             return;
         }
-
+        System.out.println("JWT FILTER PATH = " + request.getRequestURI());
         String authorization = request.getHeader("Authorization");
 
         if (authorization == null) {

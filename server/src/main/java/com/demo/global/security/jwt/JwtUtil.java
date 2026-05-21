@@ -2,6 +2,7 @@ package com.demo.global.security.jwt;
 
 import java.nio.charset.StandardCharsets;
 import java.util.Date;
+import java.util.UUID;
 
 import javax.crypto.SecretKey;
 import javax.crypto.spec.SecretKeySpec;
@@ -46,6 +47,11 @@ public class JwtUtil {
                 String.class);
     }
 
+    public String getJti(String token) {
+
+        return Jwts.parser().verifyWith(secretKey).build().parseSignedClaims(token).getPayload().getId();
+    }
+
     public Boolean isExpired(String token) {
 
         return Jwts.parser().verifyWith(secretKey).build().parseSignedClaims(token).getPayload().getExpiration()
@@ -54,6 +60,7 @@ public class JwtUtil {
 
     public String createJwt(String type, String email, String role, long expire) {
         return Jwts.builder()
+                .id(UUID.randomUUID().toString())
                 .claim("type", type)
                 .claim("email", email)
                 .claim("role", role)
@@ -65,6 +72,7 @@ public class JwtUtil {
 
     public String createJwt(String type, String email, String role, Long memberId, long expire) {
         return Jwts.builder()
+                .id(UUID.randomUUID().toString())
                 .claim("type", type)
                 .claim("email", email)
                 .claim("role", role)
