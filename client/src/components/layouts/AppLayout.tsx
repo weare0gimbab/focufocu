@@ -7,7 +7,7 @@ export default function AppLayout() {
   return (
     <div className="flex h-screen flex-col">
       <header className="flex items-center justify-between border-b bg-white px-6 py-3 shadow-sm">
-        <span className="text-lg font-semibold">naro</span>
+        <span className="text-lg font-semibold">pocupocu</span>
         <div className="flex items-center gap-4">
           <span className="text-sm text-gray-600">{user?.nickname}</span>
           <button
