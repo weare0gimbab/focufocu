@@ -6,28 +6,19 @@ import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import com.demo.domain.member.dto.AuthTokensDTO;
-import com.demo.domain.member.dto.request.LoginRequestDTO;
 import com.demo.domain.member.dto.response.MemberProfileResponseDTO;
 import com.demo.domain.member.dto.request.MemberSignUpRequestDTO;
 import com.demo.domain.member.dto.request.PasswordResetConfirmRequestDTO;
 import com.demo.domain.member.entity.Member;
 import com.demo.domain.member.entity.MemberRole;
 import com.demo.domain.member.entity.Provider;
-import com.demo.domain.member.exception.LoginException;
 import com.demo.domain.member.exception.PasswordResetException;
-import com.demo.domain.member.exception.RefreshTokenException;
 import com.demo.domain.member.exception.RegisterException;
 import com.demo.domain.member.repository.MemberRepository;
-import com.demo.global.security.jwt.JwtContents;
-import com.demo.global.security.jwt.JwtUtil;
 import com.demo.global.redis.RedisKeys;
 import com.demo.global.redis.RedisRepository;
 
-import java.util.List;
-
 import java.time.Duration;
-import java.util.List;
 import java.util.Optional;
 import java.util.Random;
 import java.util.UUID;

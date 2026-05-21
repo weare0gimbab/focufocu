@@ -3,7 +3,6 @@ package com.demo.domain.member.dto.request;
 import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.Pattern;
 import jakarta.validation.constraints.Size;
 import lombok.Data;
 import com.demo.domain.member.entity.Member;
@@ -28,17 +27,12 @@ public class MemberSignUpRequestDTO {
     @Schema(description = "닉네임", example = "JohnDoe", required = true)
     private String nickname;
 
-    @NotBlank(message = "역할(Role)은 필수 입력입니다.")
-    @Pattern(regexp = "USER|ADMIN", message = "역할은 USER|ADMIN 중 하나여야 합니다.")
-    @Schema(description = "회원 역할: USER 또는 ADMIN", example = "USER", required = true)
-    private String role;
-
     public Member toEntity() {
         return Member.builder()
                 .email(email)
                 .password(password)
                 .nickname(nickname)
-                .memberRole(MemberRole.valueOf(role))
+                .memberRole(MemberRole.USER)
                 .build();
     }
 }
